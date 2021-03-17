@@ -45,5 +45,5 @@ def calculate(x:float)->float:
         result = 0.0
     return float('%0.6f' % result)
 
-x=float(input())
-print(calculate(x))
+# x=float(input())
+# print(calculate(x))
