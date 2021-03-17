@@ -21,22 +21,24 @@ def Ln(x:float)->float:
     return yn
 
 def XtimesY(x:float,y:float)->float:
-    if x==0:
+    if x<=0:
         result = 0.0
     elif x>0:
         result = exponent(y*Ln(x))
-    else:
-        if y % 1 != 0:
-            return 0.0
-        if y % 2 == 0:
-            result = exponent((y)*Ln((-1)*(x)))
-        else:
-            result = exponent((y)*Ln((-1)*(x)))*-1
+    # else:
+    #     if y % 1 != 0:
+    #         return 0.0
+    #     if y % 2 == 0:
+    #         result = exponent((y)*Ln((-1)*(x)))
+    #     else:
+    #         result = exponent((y)*Ln((-1)*(x)))*-1
         
     # return float('%0.6f' % result)
     return result
 
 def sqrt(x:float,y:float)->float:
+    if x==0:
+        return 0.0
     return XtimesY(y, 1/x)
 
 def calculate(x:float)->float:
